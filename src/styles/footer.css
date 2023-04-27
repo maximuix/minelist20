@@ -1,0 +1,39 @@
+#footer {
+    margin-top: 60px;
+    background-color: var(--neutral-dark-grey-300);
+    padding: 40px 0px 0px 0px;
+}
+
+.footerNavList {
+ margin-bottom: 40px;
+    gap: 48px;
+}
+
+.footerNavItem h2 {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--neutral-white);
+    margin-bottom: 0px;
+}
+
+.navFooter {
+    gap: 8px;
+    margin: 8px 0px 0px 0px;
+}
+
+.navLink {
+    font-size: 16px;
+    opacity: 0.7;
+    color: var(--neutral-white);
+}
+
+.allRights {
+    height: 80px;
+}
+
+.allRights h6 {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--neutral-white);
+    margin-bottom: 0px;
+}

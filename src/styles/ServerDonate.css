@@ -1,0 +1,64 @@
+#serverDonate h1 {
+    font-size: 40px;
+    color: var(--neutral-white);
+    margin-top: 156px;
+    font-weight: 700;
+}
+
+#serverDonate h2 {
+    font-size: 28px;
+    color: var(--neutral-white);
+    margin-top: 40px;
+}
+
+#DonateCard {
+    background-color: var(--neutral-dark-grey-200);
+    border: 1px #00732B solid;
+    border-radius: 24px;
+    padding: 24px 0px;
+
+}
+
+#DonateCard p {
+    font-size: 16px;
+    color: var(--neutral-white);
+}
+
+.validity__input {
+    width: 600px;
+    height: 56px;
+    background: var(--neutral-dark-grey-300) url("../img/icons/next.svg") no-repeat 98% !important;
+    color: var(--neutral-white);
+    border-radius: 12px;
+    margin-top: 16px;
+    padding: 0px 16px 0px 16px;
+}
+
+.dropdown__button {
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: var(--neutral-white);
+}
+
+.dropdown__list {
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    background-color: #1D201E;
+    width: 100%;
+}
+
+.dropdown__list-item {
+    margin: 0px;
+    padding: 0px;
+}
+
+#DonateCardMore {
+    width: 100%;
+    background-color: var(--neutral-dark-grey-200);
+    border: 1px #00732B solid;
+    border-radius: 24px;
+    padding: 24px 24px 24px 24px;
+}
+

@@ -1,0 +1,272 @@
+@media screen and (max-width: 991.98px) {
+    #header {
+        height: 88px !important;
+    }
+
+    #search {
+        width: 100% !important;
+    }
+
+    .version {
+        width: 100% !important;
+    }
+
+    .version-item, .version-item-active {
+        width: 50% !important;
+    }
+
+    .inf-server {
+        width: 100%;
+    }
+
+    .server-data {
+        justify-content: space-between !important;
+        width: 100% !important;
+        margin-bottom: 24px !important;
+    }
+
+
+    .server__header .title {
+        margin-bottom: 16px !important;
+    }
+
+    #IdeasButton {
+        margin-top: 24px !important;
+    }
+
+    #filter .container {
+        margin-top: 152px !important;
+    }
+
+    .footer {
+        margin-top: 56px !important;
+    }
+
+    .allRights .container {
+        flex-direction: column !important;
+        align-items: self-start !important;
+    }
+
+    .allRights .container {
+        margin: 24px 0px;
+        padding-bottom: 24px;
+    }
+
+    .allRights h6 {
+        margin-top: 8px;
+    }
+
+    .card__item {
+        gap: 16px !important;
+    }
+
+    .validity {
+        margin-top: 32px !important;
+    }
+
+}
+
+@media screen and (max-width: 767.98px) {
+
+
+    .footerNavItem h2 {
+        font-size: 24px !important;
+    }
+
+    #filter .container {
+        margin-top: 136px !important;
+    }
+
+    .footer {
+        margin-top: 40px !important;
+    }
+
+    #copied_tip {
+        display: none !important;
+
+    }
+
+    .serverIdIcon {
+        display: none !important;
+    }
+
+    .btn-group > .btn, .btn-group-vertical > .btn {
+        flex: none !important;
+    }
+
+    .server__header .btn-group {
+        width: 100% !important;
+
+    }
+
+    .social-networkHover {
+        border-right: 0px rgba(255, 255, 255, 0) solid !important;
+        border-radius: 24px !important;
+    }
+
+    .server__inf-item {
+        gap: 16px !important;
+    }
+
+    .server__inf-item h4, h5 {
+        font-size: 16px !important;
+    }
+
+    .server__header h3 {
+        font-size: 18px !important;
+    }
+
+    .modal-content {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .card__heading {
+        width: 100% !important;
+    }
+
+    .card__item {
+        width: 100% !important;
+        margin-top: 16px !important;
+    }
+
+    .card__item .btn-primary {
+        width: 100%;
+    }
+
+    .validity__input, .validity__item {
+        width: 100% !important;
+    }
+
+    #serverDonate h1 {
+        font-size: 28px !important;
+    }
+
+    #serverDonate h2 {
+        font-size: 20px !important;
+        margin-top: 16px !important;
+    }
+
+
+    #DonateCardMore h2 {
+        font-size: 28px !important;
+    }
+
+
+}
+
+@media screen and (max-width: 575.98px) {
+
+    #header {
+        height: 72px !important;
+    }
+
+    .menu__vision {
+        top: 72px !important;
+    }
+
+    .list_tag, .list_tag-active {
+        font-size: 16px !important;
+    }
+
+    .statistic-item {
+        display: none !important;
+    }
+
+    .menu__statistic {
+        display: flex !important;
+    }
+
+    .validity {
+        margin-top: 24px !important;
+    }
+
+
+}
+
+@media screen and (max-width: 479.98px) {
+
+    .tabBar {
+        display: none !important;
+    }
+
+
+    .server__title h3 {
+        font-size: 18px !important;
+    }
+
+
+    #serverId h5 {
+        font-size: 14px !important;
+    }
+
+    .statisticsTabBar {
+        display: none !important;
+    }
+
+    .server__inf-content {
+        flex-direction: column !important;
+        align-items: start !important;
+        gap: 16px !important;
+        padding: 24px 16px !important;
+    }
+
+    .server__inf-item {
+        margin: 0px !important;
+        justify-content: space-between !important;
+        width: 100%;
+    }
+
+    .server__header h3 {
+        font-size: 16px !important;
+    }
+    .menu__statistic {
+        display: flex !important;
+    }
+
+    .dropdown {
+        display: block !important;
+    }
+
+    .card__heading, .card__heading .title  {
+        flex-direction: column !important;
+    }
+
+    .card__heading .prise {
+        align-items: center !important;
+        margin-top: 16px !important;
+    }
+
+    #DonateCardMore h2 {
+        margin-top: 8px !important;
+    }
+
+
+}
+
+@media screen and (max-width: 374.98px) {
+
+    .server-data {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .server__title h3 {
+        font-size: 16px !important;
+    }
+
+    .menu__statistic {
+        display: flex !important;
+    }
+
+    .server__header .btn-group {
+        flex-direction: column !important;
+
+    }
+
+    .btn-fab {
+        width: 230px !important;
+    }
+
+}
+

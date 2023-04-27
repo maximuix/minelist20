@@ -1,0 +1,38 @@
+#header {
+    height: 96px;
+    background-color: var(--neutral-dark-grey-300);
+    z-index: 1020;
+    top: 0;
+}
+
+.statistic__title h3, .menu-statistic-item .statistic__title h3 {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--primary-green) !important;
+    margin-bottom: 0px;
+}
+
+.statistic-item h5, .menu-statistic-item h5 {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--neutral-white) !important;
+    opacity: 0.7;
+    margin-bottom: 0px;
+}
+
+.btn-header {
+    display: flex;
+    align-items: center;
+}
+
+.menu__vision {
+    gap: 20px;
+    display: none;
+    background-color: var(--neutral-dark-grey-300);
+    padding: 16px 0px;
+    top: 88px;
+    border-top: 1px rgba(255, 255, 255, 0.3) solid;
+
+}
+
+

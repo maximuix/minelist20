@@ -1,0 +1,300 @@
+@import "header.css";
+@import "Filter.css";
+@import "ServerCard.css";
+@import "LoadMore.css";
+@import "footer.css";
+@import "modal.css";
+@import "ServerPage.css";
+@import "ServerDonate.css";
+@import "media.css";
+
+body {
+    background-color: var(--neutral-bg);
+    font-family: 'Roboto', sans-serif !important;
+}
+
+:root {
+    --primary-green: #008D34;
+    --primary-green-2: #00732B;
+    --secondary-blue: rgb(65, 150, 240);
+    --secondary-red: #E02B1D;
+    --secondary-green: #009262;
+    --neutral-black: #0A0A0A;
+    --neutral-dark-grey-100: #1E1E1E;
+    --neutral-dark-grey-200: #222222;
+    --neutral-dark-grey-300: #292929;
+    --neutral-bg: #1D201E;
+    --neutral-grey: #757575;
+    --neutral-white: #FFFFFF;
+    --neutral-light-grey: #F2F2F2;
+
+}
+
+.btn-primary {
+    width: 230px;
+    padding: 0px 30px 0px 30px;
+    height: 62px;
+    background-color: var(--primary-green);
+    border-radius: 120px;
+    font-size: 18px;
+    color: var(--neutral-white);
+    border: none;
+    box-shadow: 0px 22px 40px rgba(0, 156, 58, 0.1);
+    --bs-btn-color: #fff;
+    --bs-btn-border-color: none !important;
+    --bs-btn-hover-color: var(--neutral-white) !important;
+    --bs-btn-hover-bg: var(--primary-green-2) !important;
+    --bs-btn-hover-border-color: none !important;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--primary-green-2) !important;
+    --bs-btn-active-border-color: var(--primary-green-2) !important;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg:var(--primary-green-2) !important;
+    --bs-btn-disabled-border-color:  var(--primary-green-2) !important;
+}
+
+.btn-secondary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--primary-green-2) !important;
+    --bs-btn-border-color: var(--primary-green-2) !important;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--primary-green-2) !important;
+    --bs-btn-hover-border-color: var(--primary-green-2) !important;
+    --bs-btn-focus-shadow-rgb: 130, 138, 145;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--primary-green-2) !important;
+    --bs-btn-active-border-color: var(--primary-green-2) !important;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: var(--primary-green-2) !important;
+    --bs-btn-disabled-border-color: var(--primary-green-2) !important;
+}
+
+
+.btn-primary:hover, .btn-secondary:hover {
+    background-color: var(--primary-green-2);
+    transition: ease-in-out 0.15s;
+}
+
+.btn-primary-outline {
+    width: auto;
+    padding: 0px 41px 0px 41px;
+    height: 62px;
+    background-color: var(--neutral-dark-grey-300);
+    border: 1px var(--primary-green-2) solid;
+    border-radius: 120px;
+    font-size: 18px;
+    color: var(--primary-green);
+}
+
+.btn-primary-outline:hover {
+    background-color: var(--primary-green-2);
+}
+
+.btn-secondary {
+    width: auto;
+    padding: 0px 41px 0px 41px;
+    height: 56px;
+    background-color: var(--primary-green);
+    border-radius: 120px;
+    font-size: 16px;
+    color: var(--neutral-white);
+    box-shadow: 0px 22px 40px rgba(0, 156, 57, 0.048);
+    border: none
+}
+
+.btn-secondary-outline {
+    width: auto;
+    padding: 0px 41px 0px 41px;
+    height: 56px;
+    border: 1px var(--primary-green-2) solid;
+    border-radius: 120px;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 16px;
+    color: var(--primary-green);
+}
+
+.btn-fab {
+    background-color: var(--neutral-dark-grey-200);
+    border: 1px #00732B solid;
+    border-radius: 12px !important;
+    width: 56px;
+    height: 56px;
+}
+
+.btn-fab:hover {
+    background-color: var(--neutral-dark-grey-300);
+    border: 1px #00732B solid;
+    transition: ease-in-out 0.15s;
+}
+
+.btn-fab:focus {
+    border: 1px var(--primary-green) solid !important;
+}
+
+.btn-filter {
+    margin-top: 24px;
+    border: 1px var(--secondary-blue) solid;
+    color: var(--secondary-blue);
+    border-radius: 12px;
+    width: 100%;
+}
+
+.btn-filter:hover, .btn-filter:focus  {
+    border: 1px rgba(65, 150, 240, 0.8) solid !important;
+    color: rgba(65, 150, 240, 0.8) !important;
+}
+
+input::placeholder {
+    color: #FFFFFF !important;
+    opacity: 0.7 !important;
+    font-weight: normal;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance: textfield; /* Firefox */
+}
+
+input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration { display: none; }
+
+input:focus {
+    outline: 1px #00732B solid !important;
+    color: #FFFFFF !important;
+    border-radius: 12px;
+}
+
+
+
+input:invalid {
+    outline: 1px #E02B1D solid;
+}
+
+.nobutstrapfocus:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    border: 2px var(--primary-green) solid !important;
+    box-shadow: 0px 22px 40px rgba(0, 0, 0, 0) !important;
+}
+
+select {
+    padding: 10px 16px 10px 16px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+
+#copied_tip {
+    margin-top: 4px;
+    color: var(--neutral-white);
+    background-color: var(--primary-green);
+    border-radius: 4px;
+    padding: 8px 8px 8px 8px;
+    position: absolute;
+}
+
+option {
+    border: none !important;
+}
+
+
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #F8F9FC;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #cbcbcb;
+    border-radius: 120px;
+    height: 125px;
+}
+
+.dropdown-toggle {
+    border-radius: 4px !important;
+    height: 44px !important;
+    padding: 0px 16px !important;
+}
+
+.dropdown-toggle::after {
+    border: 0px rgba(255, 255, 255, 0) solid !important;
+    margin-top: 5px !important;
+}
+
+.dropdownToggletTab::after {
+    content: url("../img/icons/next.svg") !important;
+}
+
+.dropdown-menu {
+    --bs-dropdown-zindex: 1000;
+    --bs-dropdown-min-width: 10rem;
+    --bs-dropdown-padding-x: 0;
+    --bs-dropdown-padding-y: 0.5rem;
+    --bs-dropdown-spacer: 0.125rem;
+    --bs-dropdown-font-size: 1rem;
+    --bs-dropdown-color: var(--bs-body-color);
+    --bs-dropdown-bg: var(--bs-body-bg);
+    --bs-dropdown-border-color: var(--bs-border-color-translucent);
+    --bs-dropdown-border-radius: 0.375rem;
+    --bs-dropdown-border-width: var(--bs-border-width);
+    --bs-dropdown-inner-border-radius: calc(0.375rem - var(--bs-border-width));
+    --bs-dropdown-divider-bg: var(--bs-border-color-translucent);
+    --bs-dropdown-divider-margin-y: 0.5rem;
+    --bs-dropdown-box-shadow: 0 0.5rem 1rem rgba(var(--bs-body-color-rgb), 0.15);
+    --bs-dropdown-link-color: var(--bs-body-color);
+    --bs-dropdown-link-hover-color: var(--bs-body-color);
+    --bs-dropdown-link-hover-bg: var(--neutral-bg) !important;
+    --bs-dropdown-link-active-color: #fff;
+    --bs-dropdown-link-active-bg: var(--neutral-dark-grey-300) !important;
+    --bs-dropdown-link-disabled-color: #adb5bd;
+    --bs-dropdown-item-padding-x: 1rem;
+    --bs-dropdown-item-padding-y: 0.25rem;
+    --bs-dropdown-header-color: #6c757d;
+    --bs-dropdown-header-padding-x: 1rem;
+    --bs-dropdown-header-padding-y: 0.5rem;
+    position: absolute;
+    z-index: var(--bs-dropdown-zindex);
+    display: none;
+    min-width: var(--bs-dropdown-min-width);
+    padding: var(--bs-dropdown-padding-y) var(--bs-dropdown-padding-x);
+    margin: 0;
+    font-size: 14px !important;
+    background-color: var(--neutral-dark-grey-300);
+    border-radius: 4px !important;
+
+}
+
+.btn-info {
+    background: none !important;
+    border: 0px !important;
+    padding: 0px !important;
+
+}

@@ -1,0 +1,68 @@
+.ServerCards {
+    margin-top: 24px;
+    gap: 16px;
+}
+
+#serverCard .container {
+    padding: 43px 45px;
+    background-color: var(--neutral-dark-grey-200);
+    border-radius: 24px;
+    border: 1px var(--primary-green-2) solid;
+}
+
+.server__title, .inf-server {
+    gap: 24px;
+}
+
+.server__title h3 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 130%;
+    color: var(--neutral-white);
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.tag {
+    background-color: var(--primary-green);
+    padding: 0px 16px;
+    width: min-content;
+    height: 44px;
+    border-radius: 4px;
+}
+
+.tag h4 {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--neutral-white);
+    margin-bottom: 0px;
+}
+
+.server-data {
+    gap: 16px;
+}
+
+#online {
+    font-size: 40px;
+    color: var(--primary-green);
+    font-weight: 500;
+}
+
+#serverId {
+    background-color: var(--neutral-dark-grey-300);
+    padding: 0px 16px 0px 16px;
+    height: 40px;
+    border-radius: 4px;
+}
+
+#serverId h5 {
+    font-size: 16px;
+    color: var(--neutral-white);
+    margin-bottom: 0px;
+}
+
+#copy {
+    background-color: rgb(0, 0, 0, 0);
+    border: none;
+    padding: 0px 0px 0px 0px;
+}
