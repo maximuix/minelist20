@@ -268,5 +268,9 @@
         width: 230px !important;
     }
 
+    .filterMoreIcon {
+        display: none !important;
+    }
+
 }
 

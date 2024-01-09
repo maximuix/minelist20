@@ -2,29 +2,6 @@ import React, {useState} from 'react';
 
 const Filter = (props) => {
 
-    function buttonMore() {
-        let filterMore = document.getElementById("filterMore");
-        let btnFilter = document.getElementById("btnFilter");
-
-        if (filterMore.style.display === "none") {
-            filterMore.style.display = "block";
-            btnFilter.innerHTML = 'Закрыть фильтры<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
-                '<path d="M15.5 5L5.5 15" stroke="#4196F0" stroke-linecap="round" stroke-linejoin="round"/>\n' +
-                '<path d="M5.5 5L15.5 15" stroke="#4196F0" stroke-linecap="round" stroke-linejoin="round"/>\n' +
-                '</svg>';
-
-        } else {
-            filterMore.style.display = "none";
-            btnFilter.innerHTML = `Дополнительные фильтры<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M10.5 5V15" stroke="#4196F0" stroke-linecap="round"/>
-<path d="M15.5 10H5.5" stroke="#4196F0" stroke-linecap="round"/>
-</svg>`;
-        }
-
-
-    }
-
-
 
     const [toggleState, setToggleState] = useState(1);
 
@@ -62,14 +39,20 @@ const Filter = (props) => {
         setPluginState(index);
     }
 
+    const [openFilter, setOpenFilter] = useState(false)
 
+    const setOpen = (value) => {
+        setOpenFilter(value)
+    }
 
     return (
         <section id="filter">
             <div className="container w-100">
                 <div className="dropdown w-100 d-none">
-                    <button className="btn btn-secondary dropdown-toggle dropdownToggletTab d-flex  align-items-center justify-content-between w-100" type="button" id="dropdownMenuButton1"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                    <button
+                        className="btn btn-secondary dropdown-toggle dropdownToggletTab d-flex  align-items-center justify-content-between w-100"
+                        type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
                         Топ серверов
                     </button>
                     <ul className="dropdown-menu w-100" aria-labelledby="dropdownMenuButton1">
@@ -93,15 +76,17 @@ const Filter = (props) => {
                             onClick={() => toggleTab(4)}>Маленький онлайн
                     </button>
                 </div>
-                <div className="row row-cols-12 row-cols-xs-12 row-cols-sm-12 row-cols-md-12 row-cols-lg-12 row-cols-xl-12 row-cols-xxl-12 filter-item">
-                    <input className="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-6 col-xxl-6 border-0" id="search" type="search" placeholder="Введите IP сервера"/>
+                <div
+                    className="row row-cols-12 row-cols-xs-12 row-cols-sm-12 row-cols-md-12 row-cols-lg-12 row-cols-xl-12 row-cols-xxl-12 filter-item">
+                    <input className="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-6 col-xxl-6 border-0"
+                           id="search" type="search" placeholder="Введите IP сервера"/>
                     <div className='col-12 col-xs-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 col-xxl-5 px-0'>
                         <div
                             className="version d-flex flex-row">
                             <button
                                 className={version === 1 ? "version-item-active" : "version-item"}
                                 onClick={() => setVersion(1)}>
-                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                <svg className="filterMoreIcon" width="25" height="24" viewBox="0 0 25 24" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M4 8C4 7.04306 4.00106 6.37565 4.06876 5.87208C4.13453 5.3829 4.25483 5.12385 4.43934 4.93934C4.62385 4.75483 4.8829 4.63453 5.37208 4.56876C5.87565 4.50106 6.54306 4.5 7.5 4.5H17.5C18.4569 4.5 19.1244 4.50106 19.6279 4.56876C20.1171 4.63453 20.3762 4.75483 20.5607 4.93934C20.7452 5.12385 20.8655 5.3829 20.9312 5.87208C20.9989 6.37565 21 7.04306 21 8V16.5H4V8Z"
@@ -129,7 +114,7 @@ const Filter = (props) => {
                         </div>
                     </div>
                 </div>
-                <div id="filterMore">
+                <div id="filterMore" className={openFilter ? "filter-more-active" : "filter-more"}>
                     <hr style={{color: "#FFFFFF", height: 2, marginTop: 24}}/>
                     <div className="filter_list d-flex flex-column">
                         <div className="list-item d-flex flex-column">
@@ -168,8 +153,8 @@ const Filter = (props) => {
                                      onClick={() => setTag(4)}>
                                     <h6>
                                         1.3</h6></div>
-                                <div  className={tag === 5 ? "list_tag-active" : "list_tag"}
-                                      onClick={() => setTag(5)}>
+                                <div className={tag === 5 ? "list_tag-active" : "list_tag"}
+                                     onClick={() => setTag(5)}>
                                     <h6>
                                         1.4</h6></div>
                                 <div className={tag === 6 ? "list_tag-active" : "list_tag"}
@@ -322,15 +307,23 @@ const Filter = (props) => {
                     </div>
 
                 </div>
-                <button className="btn btn-secondary-outline btn-filter" id="btnFilter" onClick={buttonMore}>
-                    Дополнительные фильтры
-                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.5 5V15" stroke="#4196F0" stroke-linecap="round"/>
-                        <path d="M15.5 10H5.5" stroke="#4196F0" stroke-linecap="round"/>
-                    </svg>
-
-                </button>
+                {
+                    openFilter
+                        ?
+                        <button className="btn btn-secondary-outline btn-filter" onClick={() => setOpen(false)}>
+                            Закрыть фильтры<svg className="filterMoreIcon" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                                            <path d="M15.5 5L5.5 15" stroke="#4196F0" stroke-linecap="round" stroke-linejoin="round"/>\n' +
+                                             <path d="M5.5 5L15.5 15" stroke="#4196F0" stroke-linecap="round" stroke-linejoin="round"/>\n' +
+                                             </svg>
+                        </button>
+                        :
+                        <button className="btn btn-secondary-outline btn-filter" onClick={() => setOpen(true)}>
+                            Дополнительные фильтры<svg className="filterMoreIcon" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5 5V15" stroke="#4196F0" stroke-linecap="round"/>
+                            <path d="M15.5 10H5.5" stroke="#4196F0" stroke-linecap="round"/>
+                        </svg>
+                        </button>
+                }
             </div>
         </section>
     );

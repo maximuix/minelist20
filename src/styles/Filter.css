@@ -29,6 +29,14 @@
     margin-top: 24px;
 }
 
+.filter-more {
+    display: none;
+}
+
+.filter-more-active {
+    display: block;
+}
+
 #search {
     padding: 0px 16px;
     border-radius: 12px;
@@ -141,10 +149,6 @@
     font-weight: 400;
     font-size: 18px;
     margin-bottom: 0px !important;
-}
-
-#filterMore {
-    display: none;
 }
 
 
